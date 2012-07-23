@@ -4,7 +4,7 @@
     <nav id="footer_nav" class="nav">
     <ul>
       <li class="home">
-        <a href="home.php">Home</a>
+        <a href="index.php">Home</a>
       </li>
       <li class="services">
         <a href="service.php">Services</a>
