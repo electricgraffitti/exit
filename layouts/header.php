@@ -1,16 +1,16 @@
 <header id="header" class="content">
-  <nav id="main_nav" class="round shadow">
+  <nav id="main_nav" class="nav">
     <ul>
-      <li>
-        <a href="index.php" class="home icon small_icon">Home</a>
+      <li class="home bgs">
+        <a href="home.php" class="home icon small_icon">Home</a>
       </li>
-      <li>
+      <li class="services bgs">
         <a href="service.php" class="icon small_icon">Services</a>
       </li>
-      <li>
+      <li class="about bgs">
         <a href="about.php" class="icon small_icon">About</a>
       </li>
-      <li>
+      <li class="contact bgs">
         <a href="contact.php" class="icon small_icon">Contact</a>
       </li>
     </ul>

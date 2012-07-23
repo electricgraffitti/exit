@@ -9,10 +9,11 @@
   <?php require_once("layouts/headmeta.php"); ?>
 </head>
 
-<body class="internal">
-<?php require_once("layouts/facebook_script.php"); ?>
+<body class="about">
+    <?php require_once("layouts/facebook_script.php"); ?>
     <section id="mast_header" class="full_section">
       <?php require_once("layouts/header.php"); ?>
+      <?php require_once("views/banners/about_banner.php"); ?>
       <div class="clear"></div>
     </section>
     
@@ -27,11 +28,7 @@
     </footer>
     <div class="clear"></div>
 
-  
-  
-  
   <?php require_once("layouts/scripts.php"); ?>
-  
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
 

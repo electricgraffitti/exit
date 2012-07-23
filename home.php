@@ -13,34 +13,12 @@
     <?php require_once("layouts/facebook_script.php"); ?>
     <section id="mast_header" class="full_section">
       <?php require_once("layouts/header.php"); ?>
-      <section id="banner" class="red_gradient full_section">
-        <ul id="main_sections" class="content">
-          <li>
-            <img src="public/images/engine_repair.png" alt="">
-            <header class="custom_bold">Engine Repair</header>
-            <p>Our technicians provide top quality repairs for all major brands of small engines, as well as maintenance repairs to keep your job trouble free.</p>
-            <a href="service.php" title="Service" class="button black_button">Get Service</a>
-          </li>
-          <li>
-            <img src="public/images/service.png" alt="">
-            <header class="custom_bold">Parts &#38; Service</header>
-            <p>We carry a complete line of replacement parts and maintenance products for all major brands of small engines.</p>
-            <a href="service.php" title="Service" class="button black_button">Get Parts</a>
-          </li>
-          <li>
-            <img src="public/images/midget_engines.png" alt="">
-            <header class="custom_bold">Midget Engines</header>
-            <p>Our high performance speed shop can provide you with the best custom engine modifications to help you get to the finish line.</p>
-            <a href="midgets.php" title="" class="button black_button">Get Fast</a>
-          </li>
-          <div class="clear"></div>
-        </ul>
-      </section>
+      <?php require_once("views/banners/home_banner.php"); ?>
       <div class="clear"></div>
     </section>
     
     <section id="content" class="full_section">
-      <?php require_once("views/index_content.php"); ?>
+      <?php require_once("views/home_content.php"); ?>
       <div class="clear"></div>
     </section>
 
@@ -50,11 +28,7 @@
     </footer>
     <div class="clear"></div>
 
-  
-  
-  
   <?php require_once("layouts/scripts.php"); ?>
-  
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
 
