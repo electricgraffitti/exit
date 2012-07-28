@@ -14,7 +14,7 @@
 			<div class="post_copy">
 				<header class="custom_bold section_header">Pricing your business.</header>
 				<p>
-					Do owner's discretionary earnings, add-backs, recasting, and EBITDA have you confused? Are you worried about over-pricing or under-pricing your business? ExitPlan.me's tools help make the recasting process as simple as running a QuickBooks export.  Our business valuation experts are some of the most respected in the industry.  When we work out a listing price, we won’t be guessing. You can know that you’ll be getting the maximum number of dollars from your business possible.
+					Do owner's discretionary earnings, add-backs, recasting, and EBITDA have you confused? Are you worried about over-pricing or under-pricing your business? ExitPlan.me's tools help make the recasting process as simple as running a QuickBooks export.  Our business valuation experts are some of the most respected in the industry.  When we work out a listing price, we won't be guessing. You can know that you'll be getting the maximum number of dollars from your business possible.
 				</p>
 			</div>
 			<div class="bgs post_image fold_4"></div>
@@ -36,7 +36,7 @@
 			<div class="post_copy">
 				<header class="custom_bold section_header">Its a secret...</header>
 				<p>
-					When you list your home for sale, you want everyone to know.  When it’s time to list your business, you don’t want anyone—not your customers, competitors, or employees—to know.  So we protect your confidentiality by requiring all prospective buyers to sign a non-disclosure agreement before receiving any information which could identify your business.
+					When you list your home for sale, you want everyone to know.  When it's time to list your business, you don't want anyone-not your customers, competitors, or employees-to know.  So we protect your confidentiality by requiring all prospective buyers to sign a non-disclosure agreement before receiving any information which could identify your business.
 				</p>
 			</div>
 			<div class="bgs post_image fold_6"></div>
