@@ -11,7 +11,7 @@
         <a href="about.php" class="icon small_icon">About</a>
       </li>
       <li class="contact bgs">
-        <a href="#" class="icon small_icon">Contact</a>
+        <a href="contact.php" class="icon small_icon">Contact</a>
       </li>
     </ul>
   </nav>

@@ -15,16 +15,16 @@ echo "";
   <form method="post" action="form_script.php" name="contact">
 			<div class="form_field">
 				<label>* First Name:</label><br/>
-    		<input name="name" type="text" value="<?php echo $name; ?>" size="16"/><br />
+    		<input name="firstname" type="text" value="<?php echo $firstname; ?>" size="16"/><br />
     		<div class="error">
-					<!--ERRORMSG:name-->
+					<!--ERRORMSG:firstname-->
 				</div>
 			</div>
 			<div class="form_field">
 				<label>* Last Name:</label><br/>
-    		<input name="name" type="text" value="<?php echo $name; ?>" size="16"/><br />
+    		<input name="lastname" type="text" value="<?php echo $lastname; ?>" size="16"/><br />
     		<div class="error">
-					<!--ERRORMSG:name-->
+					<!--ERRORMSG:lastname-->
 				</div>
 			</div>
 			<div class="form_field">

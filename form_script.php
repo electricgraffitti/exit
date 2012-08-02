@@ -1,4 +1,13 @@
 <?PHP
+######################################################
+#                                                    #
+#                Forms To Go 4.2.1                   #
+#             http://www.bebosoft.com/               #
+#                                                    #
+######################################################
+
+
+
 
 define('kOptional', true);
 define('kMandatory', false);
@@ -100,50 +109,6 @@ function CheckEmail($email, $optional) {
 }
 
 
-function CheckValueList_select($values, $valType, $optional) {
-
- $selCnt = 0;
-
- $valueList[] = 'General';
- $valueList[] = 'Parts';
- $valueList[] = 'Repair';
- $valueList[] = 'Service';
- $valueList[] = 'Quarter Midgets';
-
-
-
- if (!is_array($values)) {
-  if (strlen($values) > 0) {
-   $values = array($values);
-  } else {
-   $values = array();
-  }
- }
-
- foreach ($values as $valuesKey => $valuesVal) {
-  foreach ($valueList as $valueListKey => $valueListVal) {  
-   if ($valueListVal == $valuesVal) {
-    $selCnt++;
-    break;
-   }
-  } 
-  reset($valueList);
- }
-
- if ((count($values) == 0) && ($optional === kOptional)) {
-  return true;
- } elseif (($valType == 1) && ($selCnt > 0)) {
-  return true;
- } elseif (($valType == 2) && ($selCnt == count($valueList))) {
-  return true;
- } elseif (($valType == 3) && ($selCnt == 0)) {
-  return true;
- } else {
-  return false;
- }
- 
-}
-
 function CheckTelephone($telephone, $valFormat, $optional) {
  if ( (strlen($telephone) == 0) && ($optional === kOptional) ) {
   return true;
@@ -162,10 +127,10 @@ if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
  $clientIP = $_SERVER['REMOTE_ADDR'];
 }
 
-$FTGname = DoStripSlashes( $_POST['name'] );
-$FTGemail_address = DoStripSlashes( $_POST['email_address'] );
+$FTGfirstname = DoStripSlashes( $_POST['firstname'] );
+$FTGlastname = DoStripSlashes( $_POST['lastname'] );
 $FTGtel = DoStripSlashes( $_POST['tel'] );
-$FTGselect = DoStripSlashes( $_POST['select'] );
+$FTGemail_address = DoStripSlashes( $_POST['email_address'] );
 $FTGcomments = DoStripSlashes( $_POST['comments'] );
 
 
@@ -175,26 +140,33 @@ $validationFailed = false;
 # Fields Validations
 
 
-if (!CheckString($FTGname, 2, 35, kStringRangeBetween, kYes, kNo, kYes, '', kMandatory)) {
- $FTGErrorMessage['name'] = 'Enter First & Last Name';
+if (!CheckString($FTGfirstname, 2, 50, kStringRangeBetween, kYes, kNo, kNo, '', kMandatory)) {
+ $FTGErrorMessage['firstname'] = 'Enter a Valid First Name';
  $validationFailed = true;
 }
 
-if (!CheckEmail($FTGemail_address, kMandatory)) {
- $FTGErrorMessage['email_address'] = 'Enter A Valid Email Address';
+if (!CheckString($FTGlastname, 2, 50, kStringRangeBetween, kYes, kNo, kNo, '', kMandatory)) {
+ $FTGErrorMessage['lastname'] = 'Enter a Valid Last Name';
  $validationFailed = true;
 }
 
 if (!CheckTelephone($FTGtel, '[0-9]{3}\-[0-9]{3}\-[0-9]{4}', kMandatory)) {
- $FTGErrorMessage['tel'] = 'Enter A Valid Phone Number';
+ $FTGErrorMessage['tel'] = 'Enter Valid Phone Number';
  $validationFailed = true;
 }
+
+if (!CheckEmail($FTGemail_address, kMandatory)) {
+ $FTGErrorMessage['email_address'] = 'Enter Valid Email';
+ $validationFailed = true;
+}
+
+
 
 # Embed error page and dump it to the browser
 
 if ($validationFailed === true) {
 
- $fileErrorPage = 'index.php';
+ $fileErrorPage = 'contact.php';
 
  if (file_exists($fileErrorPage) === false) {
   echo '<html><head><title>Error</title></head><body>The error page: <b>' . $fileErrorPage. '</b> cannot be found on the server.</body></html>';
@@ -206,13 +178,15 @@ if ($validationFailed === true) {
  $errorList = @implode("<br />\n", $FTGErrorMessage);
  $errorPage = str_replace('<!--VALIDATIONERROR-->', $errorList, $errorPage);
 
- $errorPage = str_replace('<!--FIELDVALUE:name-->', $FTGname, $errorPage);
- $errorPage = str_replace('<!--FIELDVALUE:email_address-->', $FTGemail_address, $errorPage);
+ $errorPage = str_replace('<!--FIELDVALUE:firstname-->', $FTGfirstname, $errorPage);
+ $errorPage = str_replace('<!--FIELDVALUE:lastname-->', $FTGlastname, $errorPage);
  $errorPage = str_replace('<!--FIELDVALUE:tel-->', $FTGtel, $errorPage);
+ $errorPage = str_replace('<!--FIELDVALUE:email_address-->', $FTGemail_address, $errorPage);
  $errorPage = str_replace('<!--FIELDVALUE:comments-->', $FTGcomments, $errorPage);
- $errorPage = str_replace('<!--ERRORMSG:name-->', $FTGErrorMessage['name'], $errorPage);
- $errorPage = str_replace('<!--ERRORMSG:email_address-->', $FTGErrorMessage['email_address'], $errorPage);
+ $errorPage = str_replace('<!--ERRORMSG:firstname-->', $FTGErrorMessage['firstname'], $errorPage);
+ $errorPage = str_replace('<!--ERRORMSG:lastname-->', $FTGErrorMessage['lastname'], $errorPage);
  $errorPage = str_replace('<!--ERRORMSG:tel-->', $FTGErrorMessage['tel'], $errorPage);
+ $errorPage = str_replace('<!--ERRORMSG:email_address-->', $FTGErrorMessage['email_address'], $errorPage);
 
 
  echo $errorPage;
@@ -223,18 +197,19 @@ if ( $validationFailed === false ) {
 
  # Email to Form Owner
   
- $emailSubject = FilterCChars("Contact Inquiry");
+ $emailSubject = FilterCChars("Contact Request");
   
- $emailBody = "Name : $FTGname\n"
-  . "Email_address : $FTGemail_address\n"
-  . "Tel : $FTGtel\n"
-  . "Inquiry : $FTGselect\n"
-  . "Comments : $FTGcomments\n"
+ $emailBody = "Contact Request from ExitPlan\n"
   . "\n"
+  . "First Name : $FTGfirstname\n"
+  . "Last Name : $FTGlastname\n"
+  . "Phone : $FTGtel\n"
+  . "Email : $FTGemail_address\n"
+  . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'Larry Jo <larry@cube2media.com>';
+  $emailTo = 'cinneman@gmail.com';
    
-  $emailFrom = FilterCChars("Small Engine Contact Request");
+  $emailFrom = FilterCChars("david@exitplan.me");
    
   $emailHeader = "From: $emailFrom\n"
    . "MIME-Version: 1.0\n"
@@ -244,9 +219,25 @@ if ( $validationFailed === false ) {
   mail($emailTo, $emailSubject, $emailBody, $emailHeader);
   
   
-  # Redirect user to success page
+  # Embed success page and dump it to the browser
 
-header("");
+$fileSuccessPage = 'thank_you.php';
+
+if (file_exists($fileSuccessPage) === false) {
+ echo '<html><head><title>Error</title></head><body>The success page: <b> ' . $fileSuccessPage . '</b> cannot be found on the server.</body></html>';
+ exit;
+}
+
+$successPage = ProcessPHPFile($fileSuccessPage);
+
+$successPage = str_replace('<!--FIELDVALUE:firstname-->', $FTGfirstname, $successPage);
+$successPage = str_replace('<!--FIELDVALUE:lastname-->', $FTGlastname, $successPage);
+$successPage = str_replace('<!--FIELDVALUE:tel-->', $FTGtel, $successPage);
+$successPage = str_replace('<!--FIELDVALUE:email_address-->', $FTGemail_address, $successPage);
+$successPage = str_replace('<!--FIELDVALUE:comments-->', $FTGcomments, $successPage);
+
+
+echo $successPage;
 
 }
 

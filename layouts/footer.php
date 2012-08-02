@@ -13,7 +13,7 @@
         <a href="about.php">About</a>
       </li>
       <li class="contact">
-        <a href="#">Contact</a>
+        <a href="contact.php">Contact</a>
       </li>
     </ul>
   </nav>
