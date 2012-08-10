@@ -1,13 +1,4 @@
 <?PHP
-######################################################
-#                                                    #
-#                Forms To Go 4.2.1                   #
-#             http://www.bebosoft.com/               #
-#                                                    #
-######################################################
-
-
-
 
 define('kOptional', true);
 define('kMandatory', false);
@@ -207,9 +198,9 @@ if ( $validationFailed === false ) {
   . "Email : $FTGemail_address\n"
   . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'cinneman@gmail.com';
+  $emailTo = 'david@exitplan.me';
    
-  $emailFrom = FilterCChars("david@exitplan.me");
+  $emailFrom = FilterCChars("contact@exitplan.me");
    
   $emailHeader = "From: $emailFrom\n"
    . "MIME-Version: 1.0\n"
