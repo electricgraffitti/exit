@@ -5,7 +5,7 @@
 			<div class="post_copy">
 				<header class="custom_bold section_header">Control the sale of your business. Save thousands.</header>
 				<p>
-					You can't deny that you've thought about selling your business. You've thought about trading in your 60- or 70-hour weeks to retire and spend your days enjoying the wealth you've created. Or, maybe you’re thinking about moving on to your next endeavor.
+					You can't deny that you've thought about selling your business. You've thought about trading in your 60- or 70-hour weeks to retire and spend your days enjoying the wealth you've created. Or, maybe you're thinking about moving on to your next endeavor.
 				</p>
 				<p>
 					If you've had these thoughts, but don't want to pay a business broker 10% of the sales price, ExitPlan.me is for you.
@@ -18,7 +18,7 @@
 			<div class="post_copy">
 				<header class="custom_bold section_header">Why now is the time to start!</header>
 				<p>
-					As the Baby Boomers retire, more than 70% of the 12 million privately-owned businesses are expected to change hands according to Cornell University economist Robert Avery. The time to sell your business is not after these businesses flood the market – it's before. It's now.
+					As the Baby Boomers retire, more than 70% of the 12 million privately-owned businesses are expected to change hands according to Cornell University economist Robert Avery. The time to sell your business is not after these businesses flood the market - it's before. It's now.
 				</p>
 				<p>
 					It usually takes 9-12 months from start to sale, so don't wait until you absolutely must sell. When things get to that point, you're desperate and will sell for less than you would have if you had planned ahead.  Start the process today!	
