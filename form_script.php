@@ -198,7 +198,7 @@ if ( $validationFailed === false ) {
   . "Email : $FTGemail_address\n"
   . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'david@exitplan.me';
+  $emailTo = 'cinneman@gmail.com';
    
   $emailFrom = FilterCChars("contact@exitplan.me");
    
@@ -210,25 +210,9 @@ if ( $validationFailed === false ) {
   mail($emailTo, $emailSubject, $emailBody, $emailHeader);
   
   
-  # Embed success page and dump it to the browser
+  # Redirect user to success page
 
-$fileSuccessPage = 'thank_you.php';
-
-if (file_exists($fileSuccessPage) === false) {
- echo '<html><head><title>Error</title></head><body>The success page: <b> ' . $fileSuccessPage . '</b> cannot be found on the server.</body></html>';
- exit;
-}
-
-$successPage = ProcessPHPFile($fileSuccessPage);
-
-$successPage = str_replace('<!--FIELDVALUE:firstname-->', $FTGfirstname, $successPage);
-$successPage = str_replace('<!--FIELDVALUE:lastname-->', $FTGlastname, $successPage);
-$successPage = str_replace('<!--FIELDVALUE:tel-->', $FTGtel, $successPage);
-$successPage = str_replace('<!--FIELDVALUE:email_address-->', $FTGemail_address, $successPage);
-$successPage = str_replace('<!--FIELDVALUE:comments-->', $FTGcomments, $successPage);
-
-
-echo $successPage;
+header("Location: http://www.exitplan.me/thank_you.php");
 
 }
 
