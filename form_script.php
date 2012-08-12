@@ -141,10 +141,10 @@ if (!CheckString($FTGlastname, 2, 50, kStringRangeBetween, kYes, kNo, kNo, '', k
  $validationFailed = true;
 }
 
-if (!CheckTelephone($FTGtel, '[0-9]{3}\-[0-9]{3}\-[0-9]{4}', kMandatory)) {
- $FTGErrorMessage['tel'] = 'Enter Valid Phone Number';
- $validationFailed = true;
-}
+// if (!CheckTelephone($FTGtel, '[0-9]{3}\-[0-9]{3}\-[0-9]{4}', kMandatory)) {
+//  $FTGErrorMessage['tel'] = 'Enter Valid Phone Number';
+//  $validationFailed = true;
+// }
 
 if (!CheckEmail($FTGemail_address, kMandatory)) {
  $FTGErrorMessage['email_address'] = 'Enter Valid Email';
@@ -198,7 +198,7 @@ if ( $validationFailed === false ) {
   . "Email : $FTGemail_address\n"
   . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'cinneman@gmail.com';
+  $emailTo = 'david@exitplan.me';
    
   $emailFrom = FilterCChars("contact@exitplan.me");
    
