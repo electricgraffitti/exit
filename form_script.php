@@ -198,7 +198,7 @@ if ( $validationFailed === false ) {
   . "Email : $FTGemail_address\n"
   . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'david@exitplan.me';
+  $emailTo = 'thedavidwjackson@gmail.com';
    
   $emailFrom = FilterCChars("contact@exitplan.me");
    
