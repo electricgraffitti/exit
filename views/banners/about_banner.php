@@ -1,10 +1,10 @@
 <section id="banner" class="blue_gradient content">
   <div id="banner_image" class="bgs"></div>
   <article>
-    <header>Want to sell your business and save a ton off broker 	commissions in the process?</header>
-    <p>Then ExitPlan.me is for you. ExitPlan.me represents a different approach to selling a business.</p>
+    <header>A Pulse-Racing<br>Thriller!</header>
+    <p>With its seemingly ripped-from-the-headlines plot,<br />true-to-life characters and stunning insider details<br />Unbridled Greed sizzles from first page to last.</p>
     <div class="button_wrap bgs">
-      <a href="contact.php" title="Contact Exit Plan" class="button green_button">Contact Us</a>
+      <a href="http://www.pbscart.com/cgi-bin/cp-app.pl?&pg=prod&ref=9780986024603&cat=roco&lnkbak=http://www" title="Contact Exit Plan" class="button green_button">Buy the Book</a>
     </div>
   </article>
 </section>
