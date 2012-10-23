@@ -13,12 +13,12 @@
     <?php require_once("layouts/facebook_script.php"); ?>
     <section id="mast_header" class="full_section">
       <?php require_once("layouts/header.php"); ?>
-      <?php require_once("views/banners/books_banner.php"); ?>
+      <?php require_once("views/banners/service_banner.php"); ?>
       <div class="clear"></div>
     </section>
     
     <section id="content" class="full_section">
-      <?php require_once("views/books_content.php"); ?>
+      <?php require_once("views/service_content.php"); ?>
       <div class="clear"></div>
     </section>
 

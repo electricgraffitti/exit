@@ -1,8 +1,8 @@
 <section id="banner" class="blue_gradient content">
   <div id="banner_image" class="bgs"></div>
   <article>
-    <header>Contact the Author</header>
-    <p>Questions for the author?  Comments about the Book?<br />Complete the form below.</p>
+    <header>Drop us a line.</header>
+    <p>Get the ball rolling today.  ExitPlan.me represents a different approach to selling your business.</p>
     <div id="form_wrap">
     	<?php
 if(isset($sent) && $sent == true)

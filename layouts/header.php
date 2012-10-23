@@ -5,7 +5,7 @@
         <a href="index.php" class="home icon small_icon">Home</a>
       </li>
       <li class="services bgs">
-        <a href="books.php" class="icon small_icon">Books</a>
+        <a href="service.php" class="icon small_icon">Services</a>
       </li>
       <li class="about bgs">
         <a href="about.php" class="icon small_icon">About</a>

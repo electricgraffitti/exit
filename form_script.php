@@ -198,9 +198,9 @@ if ( $validationFailed === false ) {
   . "Email : $FTGemail_address\n"
   . "Comments : $FTGcomments\n"
   . "";
-  $emailTo = 'larry@cube2media.com';
+  $emailTo = 'thedavidwjackson@gmail.com';
    
-  $emailFrom = FilterCChars("unbridledgreed@email.com");
+  $emailFrom = FilterCChars("contact@exitplan.me");
    
   $emailHeader = "From: $emailFrom\n"
    . "MIME-Version: 1.0\n"
